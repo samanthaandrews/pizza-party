@@ -17,6 +17,7 @@
   --color-accent: #f6eed6;
   --color-body-copy: #f6eed6;
   --background-image: url(../assets/pizza_slice.png);
+  --emoji: "🍕";
 }
 .theme-party {
   --color-background: #f9b4c2;
@@ -25,6 +26,7 @@
   --color-accent: #f6eed6;
   --color-body-copy: #f6eed6;
   --background-image: url(../assets/disco_ball.png);
+  --emoji: "🥳";
 }
 
 html,
@@ -71,12 +73,12 @@ img {
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2em;
+  padding: 0 2em;
   display: block;
 }
 
 section {
-  margin: 4em 0;
+  margin-bottom: 8em;
 }
 
 footer {
@@ -93,7 +95,7 @@ footer > address > a {
 }
 
 .button__container {
-  margin: 3em 0;
+  margin-top: 8em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +103,7 @@ footer > address > a {
 
 a.button {
   text-decoration: none;
-  padding: 0.5em 2em;
+  padding: 0.5em 1.5em;
   font-size: 1.5em;
   font-weight: 700;
   font-style: italic;
@@ -109,6 +111,20 @@ a.button {
   color: var(--color-accent);
   border-radius: 4px;
   box-shadow: 4px 4px 6px var(--color-dark);
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+}
+
+.nav-list {
+}
+
+.logo {
+  width: 200px;
 }
 
 /* The switch - the box around the slider */
@@ -134,29 +150,27 @@ a.button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--color-primary);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: var(--emoji);
+  font-size: 21px;
+  line-height: 28px;
   height: 26px;
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--color-secondary);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  background-color: var(--color-primary);
 }
 
 input:checked + .slider:before {
@@ -180,12 +194,6 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
 }
 
-.header__container {
-  /* position: relative;
-  text-align: center;
-  max-width: 800px; */
-}
-
 .header__title,
 .header__subtitle {
   font-family: wishedregular;
@@ -196,22 +204,17 @@ input:checked + .slider:before {
   font-size: 200%;
 }
 
-.header__title {
-  /* position: absolute;
-  top: -15%;
-  left: 50%;
-  transform: translate(-50%); */
+.header__image {
+  margin-top: -30%;
+  margin-left: 2%;
 }
 
 .header__subtitle {
-  /* position: absolute;
-  bottom: -20%;
-  left: 50%;
-  transform: translate(-50%); */
+  margin-top: -35%;
 }
 
 .pizza-kit__image {
-  margin-left: -20%;
+  margin: 1rem 1rem 1rem -20%;
   width: 70%;
   float: left;
   shape-outside: polygon(0 5%, 100% 5%, 100% 90%, 0 90%);
@@ -233,36 +236,23 @@ input:checked + .slider:before {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .header__title,
-  .header__subtitle {
-    font-size: 300%;
-  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .header__title,
-  .header__subtitle {
-    font-size: 400%;
-  }
   .testimonial {
     display: flex;
     align-items: center;
+  }
+  .reverse {
+    flex-direction: row-reverse;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .header__title,
-  .header__subtitle {
-    font-size: 500%;
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {
-  .header__title,
-  .header__subtitle {
-    font-size: 500%;
-  }
-} */
+@media only screen and (min-width: 1200px) {
+}
