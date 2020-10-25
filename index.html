@@ -10,57 +10,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:ital,wght@0,500;0,700;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <!---
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" crossorigin="anonymous" />
     -->
+    <script src="js/circletype.min.js"></script>
+    <script src="js/fittext.js"></script>
     <script src="js/scripts.js" defer></script>
   </head>
 
   <body>
+    <!--<div class="background-image"> -->
     <label class="switch">
       <input type="checkbox" />
       <span class="slider round" id="switch" onclick="toggleTheme()"></span>
     </label>
-    <h1>DIY Pizza Kits</h1>
-    <img src="assets/basil.png" alt="basil" />
-    <img src="assets/cheese.png" alt="cheese" />
-    <img src="assets/dough.png" alt="dough" />
-    <img src="assets/mushroom.png" alt="mushroom" />
-    <img src="assets/olives.png" alt="olives" />
-    <img src="assets/sauce.png" alt="sauce" />
-    <h2>Make Friday fun again</h2>
-    <button>Order Now</button>
-    <h2>Pizza Kits</h2>
-    <img src="assets/pizza_slice.png" alt="pepperoni pizza slice" />
-    <p>
-      Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin crust.
-      Pepperoni ricotta onions hawaiian philly chicken pork garlic parmesan thin crust sauteed onions meatball pan.
-    </p>
-    <h2>Cookie Pizza Kits</h2>
-    <p>
-      Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin crust.
-      Pepperoni ricotta onions hawaiian philly chicken pork garlic parmesan thin crust sauteed onions meatball pan.
-    </p>
-    <button>Order Now</button>
-    <h2>Yummy Words</h2>
-    <img src="assets/testimonials-01.png" alt="testimonial headshot Maria L" />
-    <blockquote>
-      Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin crust.
-    </blockquote>
-    <img src="assets/testimonials-02.png" alt="testimonial headshot Jeremy S" />
-    <blockquote>
-      Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin crust.
-    </blockquote>
-    <img src="assets/testimonials-03.png" alt="testimonial headshot Patricia R" />
-    <blockquote>
-      Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin crust.
-    </blockquote>
-    <h2>Our Story</h2>
-    <img src="assets/team.jpg" alt="pizza party team" />
-    <p>
-      Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin crust.
-      Pepperoni ricotta onions hawaiian philly chicken pork garlic parmesan thin crust sauteed onions meatball pan.
-    </p>
+    <main>
+      <section class="header__container">
+        <h1 id="circle-text" class="header__title">DIY Pizza Kits</h1>
+        <img src="assets/pizza_kit_ingredients.png" alt="pizza kit ingredients" class="header__image" />
+        <h2 id="reverse-circle-text" class="header__subtitle">Make Friday fun again</h2>
+      </section>
+      <div class="button__container">
+        <a href="#" class="button">Order Now</a>
+      </div>
+      <section>
+        <img src="assets/pizza_slice.png" alt="pizza slice" class="pizza-kit__image" />
+        <h2>Pizza Kits</h2>
+        <p>
+          Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin
+          crust. Pepperoni ricotta onions hawaiian philly chicken pork garlic parmesan thin crust sauteed onions
+          meatball pan.
+        </p>
+        <h2>Cookie Pizza Kits</h2>
+        <p>
+          Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin
+          crust. Pepperoni ricotta onions hawaiian philly chicken pork garlic parmesan thin crust sauteed onions
+          meatball pan.
+        </p>
+      </section>
+      <div class="button__container clearfix">
+        <a href="#" class="button">Order Now</a>
+      </div>
+      <section>
+        <h2>Yummy Words</h2>
+        <div class="testimonial">
+          <img src="assets/testimonials-01.png" alt="testimonial headshot Maria L" class="testimonial__image" />
+          <blockquote>
+            Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin
+            crust.
+          </blockquote>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin
+            crust.
+          </blockquote>
+          <img src="assets/testimonials-02.png" alt="testimonial headshot Jeremy S" class="testimonial__image" />
+        </div>
+        <div class="testimonial">
+          <img src="assets/testimonials-03.png" alt="testimonial headshot Patricia R" class="testimonial__image" />
+          <blockquote>
+            Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin
+            crust.
+          </blockquote>
+        </div>
+      </section>
+      <section>
+        <h2>Our Story</h2>
+        <img src="assets/team.jpg" alt="pizza party team" class="about__image" />
+        <p>
+          Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin
+          crust. Pepperoni ricotta onions hawaiian philly chicken pork garlic parmesan thin crust sauteed onions
+          meatball pan.
+        </p>
+      </section>
+    </main>
     <footer>
       <p>Tuesday - Sunday, 11am-9pm</p>
       <a href="tel:5554280940">505-555-5555</a>
@@ -69,5 +97,6 @@
         <p>505 Party Street, Albuquerque, NM, 87109</p>
       </address>
     </footer>
+    <!-- </div> -->
   </body>
 </html>

@@ -1,9 +1,22 @@
+@font-face {
+  font-family: "wishedregular";
+  src: url("/assets/fonts/wished-webfont.woff2") format("woff2"),
+    url("/assets/fonts/wished-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-dark: #404040;
+}
+
 .theme-pizza {
   --color-background: #f20c19;
   --color-primary: #f2ba3d;
   --color-secondary: #2a7071;
   --color-accent: #f6eed6;
-  --color--body-copy: #f6eed6;
+  --color-body-copy: #f6eed6;
+  --background-image: url(../assets/pizza_slice.png);
 }
 .theme-party {
   --color-background: #f9b4c2;
@@ -11,15 +24,91 @@
   --color-secondary: #f2ba3d;
   --color-accent: #f6eed6;
   --color-body-copy: #f6eed6;
+  --background-image: url(../assets/disco_ball.png);
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-size: large;
+  font-family: "Work Sans", sans-serif;
   color: var(--color-body-copy);
   background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Alfa Slab One", cursive;
+}
+
+h1 {
+  color: var(--color-accent);
+}
+
+h2 {
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  font-size: xx-large;
+  font-weight: 100;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+blockquote {
+  font-size: 1.5em;
+  color: var(--color-body-copy);
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+  display: block;
+}
+
+section {
+  margin: 4em 0;
+}
+
+footer {
+  font-size: 1.5em;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 4em 2em;
+  text-align: center;
+}
+
+footer > a,
+footer > address > a {
+  color: var(--color-primary);
+}
+
+.button__container {
+  margin: 3em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.button {
+  text-decoration: none;
+  padding: 0.5em 2em;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-style: italic;
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  border-radius: 4px;
+  box-shadow: 4px 4px 6px var(--color-dark);
 }
 
 /* The switch - the box around the slider */
@@ -84,3 +173,96 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.background-image {
+  background: var(--background-image);
+  background-position: left -900px top 40%;
+  background-repeat: no-repeat;
+}
+
+.header__container {
+  /* position: relative;
+  text-align: center;
+  max-width: 800px; */
+}
+
+.header__title,
+.header__subtitle {
+  font-family: wishedregular;
+  color: var(--color-accent);
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 5px;
+  font-size: 200%;
+}
+
+.header__title {
+  /* position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%); */
+}
+
+.header__subtitle {
+  /* position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%); */
+}
+
+.pizza-kit__image {
+  margin-left: -20%;
+  width: 70%;
+  float: left;
+  shape-outside: polygon(0 5%, 100% 5%, 100% 90%, 0 90%);
+}
+
+.clearfix {
+  clear: both;
+}
+
+.testimonial {
+  margin-bottom: 2em;
+}
+
+.testimonial__image {
+  max-width: 200px;
+  margin: auto;
+  display: block;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header__title,
+  .header__subtitle {
+    font-size: 300%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .header__title,
+  .header__subtitle {
+    font-size: 400%;
+  }
+  .testimonial {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .header__title,
+  .header__subtitle {
+    font-size: 500%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  .header__title,
+  .header__subtitle {
+    font-size: 500%;
+  }
+} */
