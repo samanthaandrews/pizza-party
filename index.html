@@ -3,43 +3,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
     <title>Pizza Party</title>
     <meta name="description" content="DIY pizza kits. Make Friday fun again." />
     <meta name="author" content="Pizza Party, LLC" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <!-- If this were a site for a real client, we would add their Google Analytics tracking link here -->
     <link rel="stylesheet" href="css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:ital,wght@0,500;0,700;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <!---
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" crossorigin="anonymous" />
-    -->
     <script src="js/circletype.min.js"></script>
     <script src="js/fittext.js"></script>
     <script src="js/scripts.js" defer></script>
   </head>
-
   <body>
     <div class="top-nav">
       <img src="assets/logo_pizza.png" alt="pizza party logo" id="logo" class="logo" />
-      <div>
+      <div class="right-nav">
         <label class="switch">
           <input type="checkbox" id="toggle-input" value="pizza" />
           <span class="slider round" id="switch" onclick="toggleTheme()"></span>
         </label>
-        <img src="assets/hamburger_menu.svg" alt="menu button" />
-        <nav>
-          <ul class="nav-list">
-            <li>Testimonials</li>
-            <li>About us</li>
-            <li>Order Now</li>
-          </ul>
-        </nav>
+        <img
+          src="assets/hamburger_menu.svg"
+          alt="menu button"
+          onClick="toggleNav()"
+          id="menu-toggle"
+          class="menu-toggle"
+        />
       </div>
     </div>
+    <nav id="nav">
+      <ul class="nav-list">
+        <li><a href="#pizza-kits">What's a pizza kit?</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#about-pizza-party">About us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="">Order now</a></li>
+      </ul>
+    </nav>
     <main>
       <section class="header__container">
         <h1 id="circle-text" class="header__title">DIY Pizza Kits</h1>
@@ -54,32 +57,33 @@
           <a href="#" class="button">Order Now</a>
         </div>
       </section>
-      <section>
+      <section id="pizza-kits">
+        <h2>What's a pizza kit?</h2>
         <img src="assets/pizza_slice.png" alt="pizza slice" class="pizza-kit__image" id="pizza-kit-image" />
-        <h2>Pizza Kits</h2>
+        <h3>Pizza Kits</h3>
         <p>
-          Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin
-          crust. Pepperoni ricotta onions hawaiian philly chicken pork garlic parmesan thin crust sauteed onions
-          meatball pan.
+          Our traditional pizza kits include our signature whole wheat dough and fresh, homemade tomato sauce. Toppings
+          include shredded mozarella cheese, fresh basil, and sliced pepperoni, mushrooms, and black olives. Each kit
+          also comes with baking instructions and a recyclable baking tray. Green chile available upon request.
         </p>
-        <h2>Cookie Pizza Kits</h2>
+        <h3>Cookie Pizza Kits</h3>
         <p>
-          Buffalo sauce anchovies bbq rib, bbq sauce meatball pepperoni broccoli burnt mouth meatball NY style thin
-          crust. Pepperoni ricotta onions hawaiian philly chicken pork garlic parmesan thin crust sauteed onions
-          meatball pan.
+          Our cookie pizza kits come with your choice of chocolate chip or sugar cookie dough, frosting, sprinkles,
+          maraschino cherries, candies, and marshmallows. Your kit comes with baking instructions and a recyclable
+          baking tray.
         </p>
         <div class="button__container clearfix">
           <a href="#" class="button">Order Now</a>
         </div>
       </section>
-      <section>
+      <section id="testimonials">
         <h2>Yummy Words</h2>
         <div class="testimonial">
           <img src="assets/testimonials-01.png" alt="testimonial headshot Maria L" class="testimonial__image" />
           <blockquote>
             Pizza Party kits have become my favorite special night-at-home activity. I love cooking, but often don't
             have the energy to prep and plan. These kits allow me to still get my hands messy without all the planning!
-            — Maria L.
+            <span class="testimonial__highlight">— Maria L.</span>
           </blockquote>
         </div>
         <div class="testimonial reverse">
@@ -87,31 +91,35 @@
           <blockquote>
             My family and I love getting Pizza Party kits for movie nights at home. It's such a fun way to get creative
             and talk about our week. I would recommend Pizza Party kits to anyone who is tired of takeout and wants to
-            try something different. — Jeremy S.
+            try something different. <span class="testimonial__highlight">— Jeremy S.</span>
           </blockquote>
         </div>
         <div class="testimonial">
           <img src="assets/testimonials-03.png" alt="testimonial headshot Patricia R" class="testimonial__image" />
           <blockquote>
             I ordered a Pizza Party cookie kit for my wife's birthday and we had a blast decorating it together! We felt
-            like amateur pastry chefs and laughed at our bad technique. — Patricia R.
+            like amateur pastry chefs and laughed at our bad technique.
+            <span class="testimonial__highlight">— Patricia R.</span>
           </blockquote>
         </div>
       </section>
-      <section>
+      <section id="about-pizza-party">
         <h2>Our Story</h2>
         <img src="assets/team.jpg" alt="pizza party team" class="about__image" />
         <p>
           We started Pizza Party when all three of us, Jessica, Lizzy, and Amy, realized there weren't many ways to get
-          creative and have fun without spending a lot of money going to the movies or going to a bar. Reminiscing on
-          our childhood, we all agreed that time spent cooking with family and friends made for the best memories. Our
-          love for fresh, delicious ingredients led us to create Pizza Party, where we help you have more fun in the
+          creative and have fun without spending a lot of money going to the movies or buying drinks at a bar.
+          Reminiscing on our childhood, we all agreed that time spent cooking with family and friends made for the best
+          memories.
+        </p>
+        <p>
+          Our love for fresh, delicious ingredients led us to create Pizza Party, where we help you have more fun in the
           kitchen.
         </p>
       </section>
     </main>
-    <footer>
-      <p>Tuesday - Sunday, 11am-9pm</p>
+    <footer id="contact">
+      <p>Friday-Sunday, 3pm-9pm</p>
       <a href="tel:5554280940">505-555-5555</a>
       <address>
         <a href="mailto:hi@pizzapartyabq.com">hi@pizzapartyabq.com</a>

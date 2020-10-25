@@ -43,3 +43,14 @@ const reverseCircleText = new CircleType(document.getElementById("reverse-circle
 
 window.fitText(document.getElementById("circle-text"));
 window.fitText(document.getElementById("reverse-circle-text"));
+
+function toggleNav() {
+  const nav = document.getElementById("nav");
+  if (nav.classList.contains("open")) {
+    document.getElementById("nav").classList.remove("open");
+    document.getElementById("menu-toggle").src = "assets/hamburger_menu.svg";
+  } else {
+    document.getElementById("nav").classList.add("open");
+    document.getElementById("menu-toggle").src = "assets/close_menu.svg";
+  }
+}

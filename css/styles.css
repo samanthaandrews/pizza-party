@@ -18,6 +18,9 @@
   --color-body-copy: #f6eed6;
   --background-image: url(../assets/pizza_slice.png);
   --emoji: "🍕";
+  --shape-outside: polygon(0% 13%, 100% 14%, 100% 33%, 55% 95%, 0 95%);
+  /* --shape-outside: polygon(0 5%, 100% 5%, 100% 90%, 0 90%); */
+  --accent-image-margin: 1rem 1rem 1rem -20%;
 }
 .theme-party {
   --color-background: #f9b4c2;
@@ -27,6 +30,8 @@
   --color-body-copy: #f6eed6;
   --background-image: url(../assets/disco_ball.png);
   --emoji: "🥳";
+  --shape-outside: circle(70% at 5% 50%);
+  --accent-image-margin: 2rem 2rem 2rem -20%;
 }
 
 html,
@@ -43,6 +48,7 @@ h1,
 h2,
 h3 {
   font-family: "Alfa Slab One", cursive;
+  font-weight: 500;
 }
 
 h1 {
@@ -51,9 +57,15 @@ h1 {
 
 h2 {
   color: var(--color-primary);
-  letter-spacing: 2px;
-  font-size: xx-large;
-  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+  background-color: var(--color-secondary);
+  display: inline-block;
+  padding: 10px;
 }
 
 p {
@@ -120,7 +132,39 @@ a.button {
   margin: 1em;
 }
 
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  margin-left: 10px;
+}
+
 .nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 3em;
+  text-align: right;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.nav-list > li > a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+nav {
+  display: none;
+}
+
+nav.open {
+  display: block;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 2em;
 }
 
 .logo {
@@ -214,10 +258,10 @@ input:checked + .slider:before {
 }
 
 .pizza-kit__image {
-  margin: 1rem 1rem 1rem -20%;
+  margin: var(--accent-image-margin);
   width: 70%;
   float: left;
-  shape-outside: polygon(0 5%, 100% 5%, 100% 90%, 0 90%);
+  shape-outside: var(--shape-outside);
 }
 
 .clearfix {
@@ -232,6 +276,11 @@ input:checked + .slider:before {
   max-width: 200px;
   margin: auto;
   display: block;
+}
+
+span.testimonial__highlight {
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
