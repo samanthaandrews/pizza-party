@@ -18,8 +18,7 @@
   --color-body-copy: #f6eed6;
   --background-image: url(../assets/pizza_slice.png);
   --emoji: "🍕";
-  --shape-outside: polygon(0% 13%, 100% 14%, 100% 33%, 55% 95%, 0 95%);
-  /* --shape-outside: polygon(0 5%, 100% 5%, 100% 90%, 0 90%); */
+  --shape-outside: polygon(0% 13%, 100% 13%, 52% 100%, 0 100%);
   --accent-image-margin: 1rem 1rem 1rem -20%;
 }
 .theme-party {
