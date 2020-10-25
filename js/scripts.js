@@ -54,3 +54,7 @@ function toggleNav() {
     document.getElementById("menu-toggle").src = "assets/close_menu.svg";
   }
 }
+
+function alert() {
+  return window.confirm("This site is only a demo! Pizza Party is not a real business.");
+}

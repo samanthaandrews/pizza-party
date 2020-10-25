@@ -65,7 +65,8 @@ h3 {
   font-size: 2em;
   background-color: var(--color-secondary);
   display: inline-block;
-  padding: 10px;
+  padding: 0 10px;
+  border-radius: 2px;
 }
 
 p {
@@ -278,9 +279,24 @@ input:checked + .slider:before {
   display: block;
 }
 
-span.testimonial__highlight {
+span.highlight {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+.site-details {
+  margin-top: 3em;
+}
+
+.tos > a,
+.made-by {
+  font-size: 0.5em;
+  color: var(--color-primary);
+  margin: 10px;
+}
+
+.made-by > a {
+  color: var(--color-primary);
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -28,7 +28,7 @@
         <img
           src="assets/hamburger_menu.svg"
           alt="menu button"
-          onClick="toggleNav()"
+          onclick="toggleNav()"
           id="menu-toggle"
           class="menu-toggle"
         />
@@ -40,7 +40,9 @@
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#about-pizza-party">About us</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="">Order now</a></li>
+        <li>
+          <a href="#" onclick="alert()">Order now</a>
+        </li>
       </ul>
     </nav>
     <main>
@@ -54,7 +56,7 @@
         />
         <h2 id="reverse-circle-text" class="header__subtitle">Make Friday fun again</h2>
         <div class="button__container">
-          <a href="#" class="button">Order Now</a>
+          <a href="" onclick="alert()" class="button">Order Now</a>
         </div>
       </section>
       <section id="pizza-kits">
@@ -73,7 +75,12 @@
           baking tray.
         </p>
         <div class="button__container clearfix">
-          <a href="#" class="button">Order Now</a>
+          <a
+            href=""
+            onclick="return confirm('This site is only a demo! Pizza Party is not a real business.');"
+            class="button"
+            >Order Now</a
+          >
         </div>
       </section>
       <section id="testimonials">
@@ -83,7 +90,7 @@
           <blockquote>
             Pizza Party kits have become my favorite special night-at-home activity. I love cooking, but often don't
             have the energy to prep and plan. These kits allow me to still get my hands messy without all the planning!
-            <span class="testimonial__highlight">— Maria L.</span>
+            <span class="highlight">— Maria L.</span>
           </blockquote>
         </div>
         <div class="testimonial reverse">
@@ -91,7 +98,7 @@
           <blockquote>
             My family and I love getting Pizza Party kits for movie nights at home. It's such a fun way to get creative
             and talk about our week. I would recommend Pizza Party kits to anyone who is tired of takeout and wants to
-            try something different. <span class="testimonial__highlight">— Jeremy S.</span>
+            try something different. <span class="highlight">— Jeremy S.</span>
           </blockquote>
         </div>
         <div class="testimonial">
@@ -99,7 +106,7 @@
           <blockquote>
             I ordered a Pizza Party cookie kit for my wife's birthday and we had a blast decorating it together! We felt
             like amateur pastry chefs and laughed at our bad technique.
-            <span class="testimonial__highlight">— Patricia R.</span>
+            <span class="highlight">— Patricia R.</span>
           </blockquote>
         </div>
       </section>
@@ -113,18 +120,29 @@
           memories.
         </p>
         <p>
-          Our love for fresh, delicious ingredients led us to create Pizza Party, where we help you have more fun in the
-          kitchen.
+          <span class="highlight">
+            Our love for fresh, delicious ingredients led us to create Pizza Party, where we help you have more fun in
+            the kitchen.</span
+          >
         </p>
       </section>
     </main>
     <footer id="contact">
       <p>Friday-Sunday, 3pm-9pm</p>
-      <a href="tel:5554280940">505-555-5555</a>
+      <a href="#contact" onclick="alert()">505-555-5555</a>
       <address>
-        <a href="mailto:hi@pizzapartyabq.com">hi@pizzapartyabq.com</a>
+        <a href="#contact" onclick="alert()">hi@pizzapartyabq.com</a>
         <p>505 Party Street, Albuquerque, NM, 87109</p>
       </address>
+      <div class="site-details">
+        <div class="tos">
+          <a href="#contact" onclick="alert()">Privacy Policy</a
+          ><a href="#contact" onclick="alert()">Terms of Service</a>
+        </div>
+        <p class="made-by">
+          This website was designed and built with ❤ by <a href="https://samantha-andrews.com/">Samantha Andrews</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
