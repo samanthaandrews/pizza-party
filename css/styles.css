@@ -30,8 +30,8 @@
   --color-body-copy: #f6eed6;
   --background-image: url(../assets/disco_ball.png);
   --emoji: "🥳";
-  --shape-outside: circle(70% at 5% 50%);
-  --accent-image-margin: 2rem 2rem 2rem -20%;
+  --shape-outside: circle(55% at 30% 50%);
+  --accent-image-margin: 1rem 1rem 1rem -20%;
 }
 
 html,
@@ -140,6 +140,7 @@ a.button {
 
 .menu-toggle {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .nav-list {
