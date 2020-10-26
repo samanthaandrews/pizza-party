@@ -1,10 +1,12 @@
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
   if (themeName === "theme-party") {
+    document.getElementById("favicon").href = "assets/favicon_party.ico";
     document.getElementById("logo").src = "assets/logo_party.png";
     document.getElementById("header-image").src = "assets/cookie_kit_ingredients.png";
     document.getElementById("pizza-kit-image").src = "assets/disco_ball.png";
   } else {
+    document.getElementById("favicon").href = "assets/favicon_pizza.ico";
     document.getElementById("logo").src = "assets/logo_pizza.png";
     document.getElementById("header-image").src = "assets/pizza_kit_ingredients.png";
     document.getElementById("pizza-kit-image").src = "assets/pizza_slice.png";
