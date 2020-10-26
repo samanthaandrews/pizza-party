@@ -98,4 +98,17 @@ function alert() {
   return window.confirm("This site is only a demo! Pizza Party is not a real business.");
 }
 
-// {"target":"confetti-holder","max":"80","size":"1","animate":true,"props":["circle","square","triangle","line",{"type":"svg","src":"site/hat.svg","size":25,"weight":0.2}],"colors":[[165,104,246],[230,61,135],[0,199,228],[253,214,126]],"clock":"25","rotate":false,"width":"1183","height":"633","start_from_edge":false,"respawn":true}
+const toggleButton = document.getElementById("switch");
+const menuButton = document.getElementById("menu-toggle");
+
+toggleButton.addEventListener("keydown", (event) => {
+  if (event.code === "Space" || event.code === "Enter") {
+    toggleButton.click();
+  }
+});
+
+menuButton.addEventListener("keydown", (event) => {
+  if (event.code === "Space" || event.code === "Enter") {
+    menuButton.click();
+  }
+});

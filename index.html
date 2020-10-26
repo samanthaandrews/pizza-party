@@ -33,7 +33,7 @@
       <div class="right-nav">
         <label class="switch">
           <input type="checkbox" id="toggle-input" value="pizza" />
-          <span class="slider round" id="switch" onclick="toggleTheme()"></span>
+          <span class="slider round" id="switch" onclick="toggleTheme()" tabindex="0" role="button"></span>
         </label>
         <img
           src="assets/hamburger_menu.svg"
@@ -41,6 +41,8 @@
           onclick="toggleNav()"
           id="menu-toggle"
           class="menu-toggle"
+          tabindex="0"
+          role="button"
         />
       </div>
     </div>
