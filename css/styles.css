@@ -94,6 +94,7 @@ section {
 }
 
 footer {
+  position: relative;
   font-size: 1.5em;
   background-color: var(--color-secondary);
   color: var(--color-primary);
@@ -104,6 +105,10 @@ footer {
 footer > a,
 footer > address > a {
   color: var(--color-primary);
+}
+
+#confetti-canvas {
+  position: absolute;
 }
 
 .button__container {
@@ -170,6 +175,7 @@ nav.open {
 
 .logo {
   width: 200px;
+  cursor: pointer;
 }
 
 /* The switch - the box around the slider */
@@ -289,7 +295,10 @@ span.highlight {
 }
 
 .site-details {
-  margin-top: 3em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .tos > a,

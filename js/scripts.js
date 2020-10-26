@@ -25,8 +25,45 @@ function setChecked(themeName) {
 function toggleTheme() {
   if (localStorage.getItem("theme") === "theme-pizza") {
     setTheme("theme-party");
+    var confettiSettings = {
+      target: "confetti-canvas",
+      respawn: false,
+      rotate: true,
+      props: ["circle", "square", "triangle", { type: "svg", src: "assets/confetti_party.svg", size: 25, weight: 0.5 }],
+      colors: [
+        [79, 134, 213],
+        [242, 186, 61],
+        [246, 238, 214],
+        [249, 180, 194],
+        [242, 12, 25],
+        [64, 64, 64],
+      ],
+    };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
   } else {
     setTheme("theme-pizza");
+    var confettiSettings = {
+      target: "confetti-canvas",
+      respawn: false,
+      rotate: true,
+      props: [
+        "circle",
+        "square",
+        "triangle",
+        { type: "svg", src: "assets/confetti_pepperoni.svg", size: 25, weight: 0.5 },
+      ],
+      colors: [
+        [79, 134, 213],
+        [242, 186, 61],
+        [246, 238, 214],
+        [249, 180, 194],
+        [242, 12, 25],
+        [64, 64, 64],
+      ],
+    };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
   }
 }
 // Immediately invoked function to set the theme on initial load
@@ -60,3 +97,5 @@ function toggleNav() {
 function alert() {
   return window.confirm("This site is only a demo! Pizza Party is not a real business.");
 }
+
+// {"target":"confetti-holder","max":"80","size":"1","animate":true,"props":["circle","square","triangle","line",{"type":"svg","src":"site/hat.svg","size":25,"weight":0.2}],"colors":[[165,104,246],[230,61,135],[0,199,228],[253,214,126]],"clock":"25","rotate":false,"width":"1183","height":"633","start_from_edge":false,"respawn":true}
