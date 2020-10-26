@@ -128,6 +128,7 @@ a.button {
   color: var(--color-accent);
   border-radius: 4px;
   box-shadow: 4px 4px 6px var(--color-dark);
+  -webkit-box-shadow: 4px 4px 6px var(--color-dark);
 }
 
 .top-nav {
@@ -269,6 +270,7 @@ input:checked + .slider:before {
   width: 70%;
   float: left;
   shape-outside: var(--shape-outside);
+  -webkit-shape-outside: var(--shape-outside);
 }
 
 .clearfix {
