@@ -17,9 +17,8 @@
   --color-accent: #f6eed6;
   --color-body-copy: #f6eed6;
   --background-image: url(../assets/pizza_slice.png);
+  --background-position: left -900px top 1200px;
   --emoji: "🍕";
-  --shape-outside: polygon(0% 13%, 100% 13%, 52% 100%, 0 100%);
-  --accent-image-margin: 1rem 1rem 1rem -20%;
 }
 .theme-party {
   --color-background: #f9b4c2;
@@ -28,9 +27,8 @@
   --color-accent: #f6eed6;
   --color-body-copy: #f6eed6;
   --background-image: url(../assets/disco_ball.png);
+  --background-position: left -600px top 1200px;
   --emoji: "🥳";
-  --shape-outside: circle(55% at 30% 50%);
-  --accent-image-margin: 1rem 1rem 1rem -20%;
 }
 
 html,
@@ -94,7 +92,6 @@ section {
 }
 
 footer {
-  position: relative;
   font-size: 1.5em;
   background-color: var(--color-secondary);
   color: var(--color-primary);
@@ -109,13 +106,15 @@ footer > address > a {
 
 #confetti-canvas {
   position: absolute;
+  top: 0;
+  z-index: 0;
 }
 
 .button__container {
-  margin-top: 8em;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 4em;
 }
 
 a.button {
@@ -240,12 +239,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.background-image {
-  background: var(--background-image);
-  background-position: left -900px top 40%;
-  background-repeat: no-repeat;
-}
-
 .header__title,
 .header__subtitle {
   font-family: wishedregular;
@@ -265,18 +258,6 @@ input:checked + .slider:before {
   margin-top: -35%;
 }
 
-.pizza-kit__image {
-  margin: var(--accent-image-margin);
-  width: 70%;
-  float: left;
-  shape-outside: var(--shape-outside);
-  -webkit-shape-outside: var(--shape-outside);
-}
-
-.clearfix {
-  clear: both;
-}
-
 .testimonial {
   margin-bottom: 2em;
 }
@@ -294,13 +275,6 @@ input:checked + .slider:before {
 span.highlight {
   color: var(--color-primary);
   font-weight: 700;
-}
-
-.site-details {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
 }
 
 .tos > a,
@@ -331,6 +305,11 @@ span.highlight {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .background-image {
+    background: var(--background-image);
+    background-repeat: no-repeat;
+    background-position: var(--background-position);
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

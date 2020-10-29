@@ -27,143 +27,146 @@
     <script src="js/fittext.js"></script>
   </head>
   <body>
-    <div class="top-nav">
-      <a href="#"><img src="assets/logo_pizza.png" alt="pizza party logo" id="logo" class="logo" /></a>
-      <div class="right-nav">
-        <label class="switch" aria-label="theme toggle" for="toggle-input">
-          <input type="checkbox" id="toggle-input" value="pizza" />
-          <span
-            class="slider round"
-            id="switch"
-            onclick="toggleTheme()"
-            tabindex="0"
-            role="button"
-            aria-label="theme toggle"
-          ></span>
-        </label>
-        <img
-          src="assets/hamburger_menu.svg"
-          alt="menu button"
-          onclick="toggleNav()"
-          id="menu-toggle"
-          class="menu-toggle"
-          tabindex="0"
-          aria-label="menu toggle"
-          role="button"
-        />
-      </div>
-    </div>
     <canvas id="confetti-canvas"></canvas>
-    <nav id="nav">
-      <ul class="nav-list">
-        <li><a href="#pizza-kits">What's a pizza kit?</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#about-pizza-party">About us</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <a id="order-now" href="#order-now" onclick="alert()">Order now</a>
-        </li>
-      </ul>
-    </nav>
-    <main>
-      <section class="header__container">
-        <h1 id="circle-text" class="header__title">DIY Pizza Kits</h1>
-        <img
-          src="assets/pizza_kit_ingredients.png"
-          alt="pizza kit ingredients"
-          class="header__image"
-          id="header-image"
-        />
-        <h2 id="reverse-circle-text" class="header__subtitle">Make Friday fun again</h2>
-        <div class="button__container">
-          <a id="order-now-2" href="#order-now-2" onclick="alert()" class="button">Order Now</a>
+    <div class="background-image">
+      <div class="top-nav">
+        <a href="#"><img src="assets/logo_pizza.png" alt="pizza party logo" id="logo" class="logo" /></a>
+        <div class="right-nav">
+          <label class="switch" aria-label="theme toggle" for="toggle-input">
+            <input type="checkbox" id="toggle-input" value="pizza" />
+            <span
+              class="slider round"
+              id="switch"
+              onclick="toggleTheme()"
+              tabindex="0"
+              role="button"
+              aria-label="theme toggle"
+            ></span>
+          </label>
+          <img
+            src="assets/hamburger_menu.svg"
+            alt="menu button"
+            onclick="toggleNav()"
+            id="menu-toggle"
+            class="menu-toggle"
+            tabindex="0"
+            aria-label="menu toggle"
+            role="button"
+          />
         </div>
-      </section>
-      <section id="pizza-kits">
-        <h2>What's a pizza kit?</h2>
-        <img src="assets/pizza_slice.png" alt="pizza slice" class="pizza-kit__image" id="pizza-kit-image" />
-        <h3>Pizza Kits</h3>
-        <p>
-          Our traditional pizza kits include our signature whole wheat dough and fresh, homemade tomato sauce. Toppings
-          include shredded mozarella cheese, fresh basil, and sliced pepperoni, mushrooms, and black olives. Each kit
-          also comes with baking instructions and a recyclable baking tray. Green chile available upon request.
-        </p>
-        <h3>Cookie Pizza Kits</h3>
-        <p>
-          Our cookie pizza kits come with your choice of chocolate chip or sugar cookie dough, frosting, sprinkles,
-          maraschino cherries, candies, and marshmallows. Your kit comes with baking instructions and a recyclable
-          baking tray.
-        </p>
-        <div class="button__container clearfix">
-          <a
-            id="order-now-3"
-            href="#order-now-3"
-            onclick="return confirm('This site is only a demo! Pizza Party is not a real business.');"
-            class="button"
-            >Order Now</a
-          >
-        </div>
-      </section>
-      <section id="testimonials">
-        <h2>Yummy Words</h2>
-        <div class="testimonial">
-          <img src="assets/testimonials-01.png" alt="testimonial headshot Maria L" class="testimonial__image" />
-          <blockquote>
-            Pizza Party kits have become my favorite special night-at-home activity. I love cooking, but often don't
-            have the energy to prep and plan. These kits allow me to still get my hands messy without all the planning!
-            <span class="highlight">— Maria L.</span>
-          </blockquote>
-        </div>
-        <div class="testimonial reverse">
-          <img src="assets/testimonials-02.png" alt="testimonial headshot Jeremy S" class="testimonial__image" />
-          <blockquote>
-            My family and I love getting Pizza Party kits for movie nights at home. It's such a fun way to get creative
-            and talk about our week. I would recommend Pizza Party kits to anyone who is tired of takeout and wants to
-            try something different. <span class="highlight">— Jeremy S.</span>
-          </blockquote>
-        </div>
-        <div class="testimonial">
-          <img src="assets/testimonials-03.png" alt="testimonial headshot Patricia R" class="testimonial__image" />
-          <blockquote>
-            I ordered a Pizza Party cookie kit for my wife's birthday and we had a blast decorating it together! We felt
-            like amateur pastry chefs and laughed at our bad technique.
-            <span class="highlight">— Patricia R.</span>
-          </blockquote>
-        </div>
-      </section>
-      <section id="about-pizza-party">
-        <h2>Our Story</h2>
-        <p>
-          We started Pizza Party when all three of us, Jessica, Lizzy, and Amy, realized there weren't many ways to get
-          creative and have fun without spending a lot of money going to the movies or buying drinks at a bar.
-          Reminiscing on our childhood, we all agreed that time spent cooking with family and friends made for the best
-          memories.
-        </p>
-        <img src="assets/team.jpg" alt="pizza party team" class="about__image" />
-        <p>
-          <span class="highlight">
-            Our love for fresh, delicious ingredients led us to create Pizza Party, where we help you have more fun in
-            the kitchen.</span
-          >
-        </p>
-      </section>
-    </main>
-    <footer id="contact">
-      <p>Friday-Sunday, 3pm-9pm</p>
-      <a href="#contact" onclick="alert()">505-555-5555</a>
-      <address>
-        <a href="#contact" onclick="alert()">hi@pizzapartyabq.com</a>
-        <p>505 Party Street, Albuquerque, NM, 87109</p>
-      </address>
-      <div class="site-details">
-        <div class="tos">
-          <a href="#contact" onclick="alert()">Privacy Policy</a
-          ><a href="#contact" onclick="alert()">Terms of Service</a>
-        </div>
-        <p class="made-by">
-          This website was designed and built with ❤ by <a href="https://samantha-andrews.com/">Samantha Andrews</a>
-        </p>
       </div>
-    </footer>
+      <nav id="nav">
+        <ul class="nav-list">
+          <li><a href="#pizza-kits">What's a pizza kit?</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#about-pizza-party">About us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a id="order-now" href="#order-now" onclick="alert()">Order now</a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <section class="header__container">
+          <h1 id="circle-text" class="header__title">DIY Pizza Kits</h1>
+          <img
+            src="assets/pizza_kit_ingredients.png"
+            alt="pizza kit ingredients"
+            class="header__image"
+            id="header-image"
+          />
+          <h2 id="reverse-circle-text" class="header__subtitle">Make Friday fun again</h2>
+          <div class="button__container">
+            <a id="order-now-2" href="#order-now-2" onclick="alert()" class="button">Order Now</a>
+          </div>
+        </section>
+        <section id="pizza-kits">
+          <h2>What's a pizza kit?</h2>
+          <h3>Pizza Kits</h3>
+          <p>
+            Our traditional pizza kits include our signature whole wheat dough and fresh, homemade tomato sauce.
+            Toppings include shredded mozarella cheese, fresh basil, and sliced pepperoni, mushrooms, and black olives.
+            Each kit also comes with baking instructions and a recyclable baking tray. Green chile available upon
+            request.
+          </p>
+          <h3>Cookie Pizza Kits</h3>
+          <p>
+            Our cookie pizza kits come with your choice of chocolate chip or sugar cookie dough, frosting, sprinkles,
+            maraschino cherries, candies, and marshmallows. Your kit comes with baking instructions and a recyclable
+            baking tray.
+          </p>
+          <div class="button__container">
+            <a
+              id="order-now-3"
+              href="#order-now-3"
+              onclick="return confirm('This site is only a demo! Pizza Party is not a real business.');"
+              class="button"
+              >Order Now</a
+            >
+          </div>
+        </section>
+        <section id="testimonials">
+          <h2>Yummy Words</h2>
+          <div class="testimonial">
+            <img src="assets/testimonials-01.png" alt="testimonial headshot Maria L" class="testimonial__image" />
+            <blockquote>
+              Pizza Party kits have become my favorite special night-at-home activity. I love cooking, but often don't
+              have the energy to prep and plan. These kits allow me to still get my hands messy without all the
+              planning!
+              <span class="highlight">— Maria L.</span>
+            </blockquote>
+          </div>
+          <div class="testimonial reverse">
+            <img src="assets/testimonials-02.png" alt="testimonial headshot Jeremy S" class="testimonial__image" />
+            <blockquote>
+              My family and I love getting Pizza Party kits for movie nights at home. It's such a fun way to get
+              creative and talk about our week. I would recommend Pizza Party kits to anyone who is tired of takeout and
+              wants to try something different. <span class="highlight">— Jeremy S.</span>
+            </blockquote>
+          </div>
+          <div class="testimonial">
+            <img src="assets/testimonials-03.png" alt="testimonial headshot Patricia R" class="testimonial__image" />
+            <blockquote>
+              I ordered a Pizza Party cookie kit for my wife's birthday and we had a blast decorating it together! We
+              felt like amateur pastry chefs and laughed at our bad technique.
+              <span class="highlight">— Patricia R.</span>
+            </blockquote>
+          </div>
+        </section>
+        <section id="about-pizza-party">
+          <h2>Our Story</h2>
+          <p>
+            We started Pizza Party when all three of us, Jessica, Lizzy, and Amy, realized there weren't many ways to
+            get creative and have fun without spending a lot of money going to the movies or buying drinks at a bar.
+            Reminiscing on our childhood, we all agreed that time spent cooking with family and friends made for the
+            best memories.
+          </p>
+          <img src="assets/team.jpg" alt="pizza party team" class="about__image" />
+          <p>
+            <span class="highlight">
+              Our love for fresh, delicious ingredients led us to create Pizza Party, where we help you have more fun in
+              the kitchen.</span
+            >
+          </p>
+        </section>
+      </main>
+      <footer id="contact">
+        <p>Friday-Sunday, 3pm-9pm</p>
+        <a href="#contact" onclick="alert()">505-555-5555</a>
+        <address>
+          <a href="#contact" onclick="alert()">hi@pizzapartyabq.com</a>
+          <p>505 Party Street, Albuquerque, NM, 87109</p>
+        </address>
+        <div class="site-details">
+          <div class="tos">
+            <a href="#contact" onclick="alert()">Privacy Policy</a
+            ><a href="#contact" onclick="alert()">Terms of Service</a>
+          </div>
+          <p class="made-by">
+            This website was designed and built with ❤ by <a href="https://samantha-andrews.com/">Samantha Andrews</a>
+          </p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

@@ -4,12 +4,10 @@ function setTheme(themeName) {
     document.getElementById("favicon").href = "assets/favicon_party.ico";
     document.getElementById("logo").src = "assets/logo_party.png";
     document.getElementById("header-image").src = "assets/cookie_kit_ingredients.png";
-    document.getElementById("pizza-kit-image").src = "assets/disco_ball.png";
   } else {
     document.getElementById("favicon").href = "assets/favicon_pizza.ico";
     document.getElementById("logo").src = "assets/logo_pizza.png";
     document.getElementById("header-image").src = "assets/pizza_kit_ingredients.png";
-    document.getElementById("pizza-kit-image").src = "assets/pizza_slice.png";
   }
   localStorage.setItem("theme", themeName);
   document.documentElement.className = themeName;
@@ -19,6 +17,13 @@ function setChecked(themeName) {
   if (themeName === "theme-pizza") {
     document.getElementById("toggle-input").checked = false;
   } else document.getElementById("toggle-input").checked = true;
+}
+
+function destroyAndCreateCanvas() {
+  document.getElementById("confetti-canvas").remove();
+  const newCanvas = document.createElement("canvas");
+  newCanvas.id = "confetti-canvas";
+  document.body.appendChild(newCanvas);
 }
 
 // function to toggle between pizza and party theme
@@ -41,6 +46,9 @@ function toggleTheme() {
     };
     var confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
+    setTimeout(function () {
+      destroyAndCreateCanvas();
+    }, 3000);
   } else {
     setTheme("theme-pizza");
     var confettiSettings = {
@@ -64,6 +72,9 @@ function toggleTheme() {
     };
     var confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
+    setTimeout(function () {
+      destroyAndCreateCanvas();
+    }, 3000);
   }
 }
 // Immediately invoked function to set the theme on initial load
