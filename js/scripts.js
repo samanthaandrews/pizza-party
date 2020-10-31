@@ -48,7 +48,7 @@ function toggleTheme() {
     confetti.render();
     setTimeout(function () {
       destroyAndCreateCanvas();
-    }, 3000);
+    }, 2000);
   } else {
     setTheme("theme-pizza");
     var confettiSettings = {
@@ -74,7 +74,7 @@ function toggleTheme() {
     confetti.render();
     setTimeout(function () {
       destroyAndCreateCanvas();
-    }, 3000);
+    }, 2000);
   }
 }
 // Immediately invoked function to set the theme on initial load
